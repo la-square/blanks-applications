@@ -13,3 +13,6 @@ sed -i -e "s/USER_NAME/$db_user/g" /home/hotdog/$project/djapp/settings.py >> /d
 sed -i -e "s/DB_PASSWORD/$db_pass/g" /home/hotdog/$project/djapp/settings.py >> /dev/null
 
 rm -rf /home/hotdog/$project/djapp/engine/component_deploy.sh
+
+systemctl daemon-reload
+systemctl restart uwsgi.service

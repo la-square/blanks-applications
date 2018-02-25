@@ -15,4 +15,4 @@ sed -i -e "s/DB_PASSWORD/$db_pass/g" /home/hotdog/$project/djapp/settings.py >> 
 rm -rf /home/hotdog/$project/djapp/engine/component_deploy.sh
 
 systemctl daemon-reload
-systemctl restart uwsgi.service
+systemctl restart uwsgi_$project.service
